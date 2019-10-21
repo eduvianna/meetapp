@@ -16,6 +16,11 @@ class Meetup extends Model {
 
     return this;
   }
+
+  static associate(models) {
+    this.belongsTo(models.File, { foreignKey: 'file_id', as: 'file' });
+    this.
+  }
 }
 
 export default new Meetup();
